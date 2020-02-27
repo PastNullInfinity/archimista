@@ -7,6 +7,6 @@ COPY archimista /app
 
 WORKDIR /app
 
-RUN gem install sqlite3 && bundle install
+RUN gem install sqlite3 && bundle install && export  RAILS_ENV=development &&  rake db:setup && rake db:migrate && rake assets:clean
 
 COPY . /app

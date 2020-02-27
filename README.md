@@ -1,6 +1,6 @@
 # How to run
-`docker build -t archimista .`
-`docker run -it archimista rails s -b 0.0.0.0`
+`docker-compose build`
+`docker-compose up`
 
 To know the IP of the container, run `docker container ls`, take the id of archimista and run `docker inspect <container id> | grep IP`, take note of the ip address.
 
